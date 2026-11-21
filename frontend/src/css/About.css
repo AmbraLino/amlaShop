@@ -1,0 +1,124 @@
+.about-header {
+  background: #e3dedeff;
+  width: 100%;
+}
+
+.home-link {
+  text-decoration: none;
+  color: black;
+}
+
+.about-header h1 {
+  font-size: 28px;
+}
+
+.about-header p {
+  font-size: 14px;
+}
+
+.about-story h2 {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.about-story h3 {
+  font-size: 16px;
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+
+.about-info .about-img {
+  max-width: 80%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.about-text {
+  background: #f7f7f7;
+  padding: 25px;
+}
+
+.about-text h6 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.about-text h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-text img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.about-text h6, .about-text p {
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .about-text {
+    padding: 20px;
+  }
+
+  .about-info .about-img {
+    height: 300px;
+  }
+
+  .about-text h6 {
+    font-size: 20px;
+  }
+
+  .about-text h2 {
+    font-size: 18px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-header h1 {
+    font-size: 22px;
+  }
+
+  .about-story h2 {
+    font-size: 20px;
+  }
+
+  .about-story h3 {
+    font-size: 14px;
+  }
+
+  .about-info .about-img {
+    height: 250px;
+  }
+
+  .about-text {
+    padding: 15px;
+  }
+
+  .about-text h6 {
+    font-size: 18px;
+  }
+
+  .about-text h2 {
+    font-size: 16px;
+  }
+
+  .about-text p {
+    font-size: 13px;
+  }
+}

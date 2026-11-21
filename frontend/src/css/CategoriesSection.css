@@ -1,0 +1,155 @@
+.home-carousel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 500px;
+  background: #ece4e4;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.carousel-text {
+  flex: 1;
+  padding: 20px;
+  z-index: 1;
+}
+
+.carousel-img-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width :100%;
+}
+
+.carousel-img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: contain;
+}
+
+.discount-badge { 
+  font-size: 20px; 
+  font-weight: bold; 
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px; 
+  background: #fff; 
+  color: black; 
+  border-radius: 15px; 
+  padding: 5px 15px; 
+  margin-bottom: 10px; 
+}
+
+.discount-circle { 
+  background-color: #401c0b; 
+  color: white; 
+  border-radius: 50%; 
+  width: 24px; 
+  height: 24px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 12px; 
+  font-weight: bold; 
+}
+
+.carousel-main-text {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.carousel-subtext {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.shop-btn {
+  background: #401c0b !important;
+  color: white !important;
+}
+
+.deals-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.deal-card {
+  min-width: 250px;
+  flex-shrink: 0;
+}
+
+.deal-img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.deal-btn {
+  background: #401c0b !important;
+  color: #fff !important;
+}
+
+.slider-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.arrow-btn {
+  border: 1px solid #401c0b !important;
+  color: #401c0b !important;
+  background: white !important;
+  padding: 6px 12px !important;
+}
+
+
+@media (max-width: 320px) {
+  .home-carousel {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .carousel-text { padding: 10px 0; }
+  .carousel-main-text { font-size: 20px; }
+  .carousel-subtext { font-size: 12px; }
+  .shop-btn { width: 100%; font-size: 14px; }
+  .carousel-img { max-width: 100%; margin-top: 15px; }
+
+  .deals-slider {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .deal-card {
+    width: 90% !important;
+    margin-bottom: 15px;
+  }
+
+  .deal-img { height: 200px; }
+
+  h2 { font-size: 18px !important; }
+  p { font-size: 12px !important; }
+
+  .arrow-btn {
+    font-size: 12px !important;
+    padding: 4px 8px !important;
+  }
+}
+@media (min-width: 992px) { 
+  .carousel-img {
+    width: 55%;        
+    height: 150%;       
+    max-width: none;    
+    object-fit: cover;  
+    margin-left: 380px ;
+  }
+}

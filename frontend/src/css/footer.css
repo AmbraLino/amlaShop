@@ -1,0 +1,288 @@
+.footer {
+  width: 100vw; 
+  max-width: 100%;
+  background-color: #401C0B;
+  color: #fff;
+  padding: 5%;
+  margin-top: 10%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-left {
+  max-width: 30%;
+  min-width: 250px;
+}
+
+.footer-left p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 20%;
+}
+
+.info {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.fb,
+.ig,
+.wp,
+.tt {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  padding: 5%;
+  margin-bottom: 3%;
+  transition: 0.3s;
+}
+
+.fb:hover,
+.ig:hover,
+.tt:hover {
+  background-color: white;
+  color: #401C0B;
+}
+
+.footer-right {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.footer-right .title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-right p {
+  font-size: 13px;
+  margin: 5px 0px;
+}
+
+.terms {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+@media (max-width: 992px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .footer-right {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-right .title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 8% 5%;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .footer-left {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-left h1 {
+    font-size: 20px;
+  }
+
+  .footer-left p {
+    font-size: 11px;
+    margin-bottom: 15px;
+  }
+
+  .info {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .fb,
+  .ig,
+  .tt {
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .footer-right .title {
+    font-size: 15px;
+  }
+
+  .footer-right p {
+    font-size: 12px;
+  }
+
+  .terms {
+    font-size: 12px;
+  }
+}
+.features-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 100px;
+  gap: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 200px;
+  max-width: 250px;
+}
+
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.feature-text h6 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.feature-text p {
+  font-size: 12px;
+  margin: 0;
+  color: black;
+}
+
+@media (max-width: 320px) {
+  .features-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  .feature-item {
+    flex-direction: column;
+    align-items: center;
+    min-width: auto;
+    max-width: 90%;
+    gap: 8px;
+  }
+
+  .feature-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .feature-text h6 {
+    font-size: 14px;
+  }
+
+  .feature-text p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 320px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .footer {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 8% 4%;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    box-sizing: border-box;
+  }
+
+  .footer-left h1 {
+    font-size: 18px;
+  }
+
+  .footer-left p {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  .fb,
+  .ig,
+  .tt {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+
+  .footer-right {
+    gap: 10px;
+  }
+
+  .footer-right .title {
+    font-size: 14px;
+  }
+
+  .footer-right p {
+    font-size: 11px;
+  }
+
+  .terms {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+}
