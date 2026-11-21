@@ -1,21 +1,21 @@
-const express = require("express")
-const app=express()
-const ContactModel = require("../models/contactModel.js")
-app.post("/addContact", async(req,res)=>{
-    try{
-        let getInfos=req.body
-        let newContact = new ContactModel(getInfos)
-        await newContact.save()
-        console.log(newContact)
-        res.status(200).send(newContact)
+const express = require("express");
+const ContactModel = require("../models/contactModel.js");
 
-    }catch(err){
-        res.status(500).send("Not added")
-        console.log("Not added contact: "+err)
+const app = express();
+app.use(express.json()); 
 
+app.post("/addContact", async (req, res) => {
+    try {
+        const newContact = new ContactModel(req.body);
+        await newContact.save();
+        console.log("New contact added:", newContact);
+        res.status(200).send(newContact);
+    } catch (err) {
+        console.log("Not added contact:", err);
+        res.status(500).send("Not added");
     }
-})
-module.exports = app
+});
+
+module.exports = app;
 
 
-//const contactmodel nje emer i vendosur nga ne kot

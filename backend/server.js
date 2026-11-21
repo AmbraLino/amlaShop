@@ -6,7 +6,8 @@ const path = require("path");
 
 const contactRoute = require("./routes/contactRoute.js");
 const userRoute = require("./routes/userRoute.js"); 
-const itemRoute = require("./routes/itemRoute.js"); // funksion me (app)
+const itemRoute = require("./routes/itemRoute.js");
+require("dotenv").config();
 
 const app = express();
 
@@ -26,13 +27,15 @@ app.use(session({
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
-mongoose.connect("mongodb+srv://ambralino10_db_user:wkY758ZCBDR0UxpQ@cluster0.yr2geye.mongodb.net/?retryWrites=true&w=majority")
-    .then(() => console.log("DB connected"))
-    .catch(err => console.log("DB not connected " + err));
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((err) => console.error(err));
 
-app.use(contactRoute);
-userRoute(app);   // therras userRoute si funksion
-itemRoute(app);   // therras itemRoute si funksion
+
+userRoute(app);
+itemRoute(app);   
+app.use("/", contactRoute);
+
 
 app.get("/", (req, res) => res.send("Hello World"));
 

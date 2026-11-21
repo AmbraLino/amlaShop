@@ -5,7 +5,6 @@ const path = require("path");
 const mongoose = require("mongoose");
 
 module.exports = (app) => {
-  // Multer setup
   const storage = multer.diskStorage({
     destination: (req, file, cb) => cb(null, "images"),
     filename: (req, file, cb) => cb(null, Date.now() + path.extname(file.originalname))
@@ -17,7 +16,6 @@ const path = require("path");
 const mongoose = require("mongoose");
 
 module.exports = (app) => {
-  // Multer setup për upload foto
   const storage = multer.diskStorage({
     destination: (req, file, cb) => cb(null, "images"),
     filename: (req, file, cb) => cb(null, Date.now() + path.extname(file.originalname))
@@ -30,9 +28,7 @@ module.exports = (app) => {
 
   const upload = multer({ storage, fileFilter });
 
-  console.log("Item routes loaded"); // për verifikim
-
-  // ================= POST addItem =================
+  // console.log("Item routes loaded"); 
   app.post("/api/users/addItem", upload.single("photo"), async (req, res) => {
     try {
       const userId = req.body.userId;
@@ -56,7 +52,6 @@ module.exports = (app) => {
     }
   });
 
-  // ================= GET all items =================
   app.get("/api/items", async (req, res) => {
     try {
       const allItems = await ItemModel.find({});
@@ -67,7 +62,6 @@ module.exports = (app) => {
     }
   });
 
-  // ================= GET one item =================
   app.get("/api/items/:id", async (req, res) => {
     try {
       const item = await ItemModel.findById(req.params.id);
@@ -79,7 +73,6 @@ module.exports = (app) => {
     }
   });
 
-  // ================= DELETE item =================
   app.delete("/api/items/:id", async (req, res) => {
     try {
       const deleted = await ItemModel.deleteOne({ _id: req.params.id });
@@ -91,7 +84,6 @@ module.exports = (app) => {
     }
   });
 
-  // ================= PATCH update item =================
   app.patch("/api/items/:id", upload.single("photo"), async (req, res) => {
     try {
       const updateData = { ...req.body };
@@ -117,7 +109,7 @@ module.exports = (app) => {
   };
   const upload = multer({ storage, fileFilter });
 
-  // POST addItem
+  
   app.post("/api/users/addItem", upload.single("photo"), async (req, res) => {
     try {
       const userId = req.body.userId;
@@ -140,7 +132,6 @@ module.exports = (app) => {
     }
   });
 
-  // GET all items
   app.get("/readItems", async (req, res) => {
     try {
       const allItem = await ItemModel.find({});
@@ -151,7 +142,6 @@ module.exports = (app) => {
     }
   });
 
-  // GET one item
   app.get("/readOneItem/:id", async (req, res) => {
     try {
       const oneItem = await ItemModel.findById(req.params.id);
@@ -162,7 +152,6 @@ module.exports = (app) => {
     }
   });
 
-  // DELETE one item
   app.get("/deleteOneItem/:id", async (req, res) => {
     try {
       await ItemModel.deleteOne({ _id: req.params.id });
@@ -173,7 +162,6 @@ module.exports = (app) => {
     }
   });
 
-  // PATCH update item
   app.patch("/updateItem/:id", upload.single("photo"), async (req, res) => {
     try {
       let infoItem = { ...req.body };
